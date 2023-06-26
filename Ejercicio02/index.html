@@ -13,7 +13,6 @@
         var cantNombre;
         cantNombre = prompt("introduce la cantidad de nombres que deseas listar:", '');
         console.log("cantidad:", cantNombre + "<br>");
-        document.write("cantidad:", cantNombre + "<br>");
         let nombres = [cantNombre];
         for (var i = 0; i < cantNombre; i++) {
 
@@ -21,6 +20,8 @@
             console.log(nombres[i] + "<br>");
 
         }
+
+    do {
 
         console.log("Elija una opcion: <br>");
         console.log("1. Agregar <br>");
@@ -35,7 +36,7 @@
         opcion = parseInt(op)
 
         
-        do {
+       
 
         switch (opcion) {
             
@@ -71,10 +72,16 @@
             case 4:
             console.log("Solo mostrar lista");
             console.log(nombres);
+                 break;
         }
+        console.log("Desea continuar en el menu? SI=S, NO=N");
+        var respuesta;
+        respuesta=prompt("respuesta=><br>",'');
+        console.log(respuesta);
+
     } 
-      
-      while (number!==5);
+    
+      while (respuesta=="S");
 
 
     </script>
