@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+    <script>
+        var cantNombre;
+        cantNombre = prompt("introduce la cantidad de nombres que deseas listar:", '');
+        console.log("cantidad:", cantNombre + "<br>");
+        document.write("cantidad:", cantNombre + "<br>");
+        let nombres = [cantNombre];
+        for (var i = 0; i < cantNombre; i++) {
+
+            nombres[i] = prompt("ingresar nombre");
+            console.log(nombres[i] + "<br>");
+
+        }
+
+        console.log("Elija una opcion: <br>");
+        console.log("1. Agregar <br>");
+        console.log("2. Actualizar <br>");
+        console.log("3. Borrar <br>");
+        console.log("4. Solo mostrar lista");
+        console.log("5. salir")
+        var op;
+        op = prompt("Opcion=>", '');
+        console.log("Opcion:", op + "<br>");
+        console.log(op);
+        opcion = parseInt(op)
+
+        
+        do {
+
+        switch (opcion) {
+            
+            case 1:
+                console.log("Agregando al final : <br>");
+                console.log("Que nombre desea agragar : <br>");
+                var newname;
+                newname=prompt("Nombre nuevo",'');
+                nombres.push(newname);
+                console.log(nombres);
+                break;
+
+            case 2:
+                console.log("Que posicion desea cambiar: <br>");
+                var posicion;
+                posicion=prompt("posicion=>",'');
+                console.log(posicion);
+                console.log("Que nombre nuevo desea actualizar : <br>");
+                var newname;
+                newname=prompt("Nombre nuevo",'');
+                nombres[posicion]=(newname);
+                console.log(nombres);
+
+                break;
+
+            case 3:
+                console.log("Borrando");
+                nombres.pop();
+                console.log(nombres);
+
+                break;
+
+            case 4:
+            console.log("Solo mostrar lista");
+            console.log(nombres);
+        }
+    } 
+      
+      while (number!==5);
+
+
+    </script>
+
+</body>
+
+</html>

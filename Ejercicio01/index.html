@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <label for="numero">Ingrese Numero</label>
+    <input type="number" id="numero">
+    <button onclick="calcular()">calculando orden</button>
+
+    <script>
+        function calcular(){
+            var num=parseInt(document.getElementById('numero').value);
+            var contsum=0;
+            var contpar=0;
+
+            for(var i=1;i<=num;i++){
+                if(i%2!==0){
+                    document.write(i+"<br>");
+                    
+                }
+                }
+
+             for(var a=1;a<=num;a++){
+                
+                if(a%2==0){
+                    contpar=contpar+a;
+                }
+            }
+            document.write("Total de la suma de pares es:"+contpar+"<br>"); 
+
+        }
+
+    </script>
+
+</body>
+</html>
